@@ -42,6 +42,7 @@ ConsoleCommand ConsoleCommand::Help() { return ConsoleCommand(Type::kHelp); }
 ConsoleCommand ConsoleCommand::Exit() { return ConsoleCommand(Type::kExit); }
 ConsoleCommand ConsoleCommand::Cities() { return ConsoleCommand(Type::kCities); }
 ConsoleCommand ConsoleCommand::ClearCache() { return ConsoleCommand(Type::kClearCache); }
+ConsoleCommand ConsoleCommand::UpdateCities() { return ConsoleCommand(Type::kUpdateCities); }
 ConsoleCommand ConsoleCommand::Route(RouteQuery query) { return ConsoleCommand(Type::kRoute, std::move(query)); }
 ConsoleCommand ConsoleCommand::Invalid(std::string error) { return ConsoleCommand(Type::kInvalid, std::nullopt, std::move(error)); }
 
@@ -70,6 +71,9 @@ ConsoleCommand CommandParser::ParseLine(const std::string& raw_line) const {
     }
     if (normalized == "clear" || normalized == "clear cache" || normalized == "cache clear") {
         return ConsoleCommand::ClearCache();
+    }
+    if (normalized == "update cities" || normalized == "cities update" || normalized == "update-cities" || normalized == "обновить города") {
+        return ConsoleCommand::UpdateCities();
     }
 
     if (StartsWith(normalized, "route ") || StartsWith(normalized, "маршрут ")) {

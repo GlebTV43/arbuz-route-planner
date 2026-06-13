@@ -80,6 +80,49 @@ json ScheduleJson() {
     return {{"segments", json::array({DirectSegment(), TransferSegment()})}};
 }
 
+
+json StationsListJson() {
+    return {
+        {"countries", json::array({
+            {
+                {"title", "Россия"},
+                {"regions", json::array({
+                    {
+                        {"title", "Тестовая область"},
+                        {"settlements", json::array({
+                            {
+                                {"title", "Тестград"},
+                                {"codes", {{"yandex_code", "c111111"}}},
+                                {"stations", json::array()}
+                            },
+                            {
+                                {"title", "Новый Город"},
+                                {"codes", {{"yandex_code", "c222222"}}},
+                                {"stations", json::array()}
+                            },
+                            {
+                                {"title", "Станция без городского кода"},
+                                {"codes", {{"yandex_code", "s333333"}}},
+                                {"stations", json::array()}
+                            },
+                            {
+                                {"title", ""},
+                                {"codes", {{"yandex_code", "c444444"}}},
+                                {"stations", json::array()}
+                            }
+                        })}
+                    }
+                })}
+            }
+        })}
+    };
+}
+
+void WriteCitiesFile(const fs::path& filename) {
+    std::ofstream file(filename);
+    file << json::array({{{"id", "c213"}, {"name", "Москва"}}}).dump(2);
+}
+
 fs::path MakeTempDir(const std::string& name) {
     auto stamp = std::chrono::steady_clock::now().time_since_epoch().count();
     fs::path dir = fs::temp_directory_path() / (name + "_" + std::to_string(stamp));
@@ -141,6 +184,8 @@ TEST(CommandParserTest, ParsesArrowRouteAndServiceCommands) {
 
     EXPECT_EQ(parser.ParseLine("cities").GetType(), ConsoleCommand::Type::kCities);
     EXPECT_EQ(parser.ParseLine("clear cache").GetType(), ConsoleCommand::Type::kClearCache);
+    EXPECT_EQ(parser.ParseLine("update cities").GetType(), ConsoleCommand::Type::kUpdateCities);
+    EXPECT_EQ(parser.ParseLine("update-cities").GetType(), ConsoleCommand::Type::kUpdateCities);
     EXPECT_EQ(parser.ParseLine("help").GetType(), ConsoleCommand::Type::kHelp);
     EXPECT_EQ(parser.ParseLine("exit").GetType(), ConsoleCommand::Type::kExit);
 }
@@ -179,6 +224,29 @@ TEST(CityCatalogTest, FindsCanonicalNamesAndNearestCities) {
     auto nearest = catalog.Nearest("Масква");
     ASSERT_FALSE(nearest.empty());
     EXPECT_EQ(nearest.front(), "Москва");
+}
+
+
+TEST(CityCatalogTest, UpdatesCitiesFileFromStationsList) {
+    fs::path dir = MakeTempDir("lab7_cities_update");
+    fs::path cities_file = dir / "cities.json";
+    WriteCitiesFile(cities_file);
+
+    CityCatalog catalog(cities_file);
+    EXPECT_TRUE(catalog.Contains("Москва"));
+    EXPECT_FALSE(catalog.Contains("Тестград"));
+
+    std::size_t count = catalog.UpdateFromStationsList(StationsListJson());
+
+    EXPECT_EQ(count, 2);
+    EXPECT_EQ(catalog.CodeByName("тестград"), "c111111");
+    EXPECT_EQ(catalog.CanonicalName("новый город"), "Новый Город");
+
+    CityCatalog reloaded(cities_file);
+    EXPECT_EQ(reloaded.CodeByName("Тестград"), "c111111");
+    EXPECT_FALSE(reloaded.Contains("Станция без городского кода"));
+
+    fs::remove_all(dir);
 }
 
 TEST(CityCatalogTest, RejectsUnknownCity) {
@@ -347,6 +415,28 @@ TEST(RequesterTest, BadJsonFromHttpClientReturnsNullopt) {
 
     EXPECT_FALSE(result.has_value());
     EXPECT_EQ(fake->Calls(), 1);
+    fs::remove_all(dir);
+}
+
+
+TEST(RequesterTest, UpdatesCitiesThroughInjectedHttpClient) {
+    fs::path dir = MakeTempDir("lab7_request_update_cities");
+    fs::path cities_file = dir / "cities.json";
+    WriteCitiesFile(cities_file);
+
+    auto fake = std::make_shared<FakeHttpClient>(StationsListJson().dump());
+    Requester requester("TEST_KEY", fake, dir / "cache", cities_file);
+
+    std::size_t count = requester.UpdateCities();
+
+    EXPECT_EQ(count, 2);
+    EXPECT_EQ(fake->Calls(), 1);
+    EXPECT_NE(fake->LastUrl().find("stations_list"), std::string::npos);
+    EXPECT_EQ(fake->LastParams().at("apikey"), "TEST_KEY");
+    EXPECT_EQ(fake->LastParams().at("format"), "json");
+    EXPECT_EQ(fake->LastParams().at("lang"), "ru_RU");
+    EXPECT_EQ(requester.GetCanonicalCity("тестград"), "Тестград");
+
     fs::remove_all(dir);
 }
 

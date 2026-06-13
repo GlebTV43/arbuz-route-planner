@@ -10,6 +10,7 @@
 namespace {
 
 constexpr const char* kSearchUrl = "https://api.rasp.yandex.net/v3.0/search/";
+constexpr const char* kStationsListUrl = "https://api.rasp.yandex-net.ru/v3.0/stations_list/";
 constexpr int kCacheLifetimeMinutes = 15;
 constexpr std::size_t kCacheMaxItems = 120;
 
@@ -30,8 +31,9 @@ std::string ReadKeyFromFile() {
 Requester::Requester(const std::string& apikey)
     : Requester(apikey, std::make_shared<CprHttpClient>(), std::filesystem::path(PROJECT_DATA_PATH) / "cache") {}
 
-Requester::Requester(std::string apikey, std::shared_ptr<IHttpClient> http_client, std::filesystem::path cache_dir)
-    : apikey_(ResolveApiKey(std::move(apikey))), cities_(), http_client_(std::move(http_client)),
+Requester::Requester(std::string apikey, std::shared_ptr<IHttpClient> http_client, std::filesystem::path cache_dir,
+                     std::filesystem::path cities_file)
+    : apikey_(ResolveApiKey(std::move(apikey))), cities_(std::move(cities_file)), http_client_(std::move(http_client)),
       cache_(std::move(cache_dir), kCacheLifetimeMinutes, kCacheMaxItems) {
     if (!http_client_) {
         throw std::invalid_argument("HTTP-клиент не задан");
@@ -123,6 +125,30 @@ std::optional<json> Requester::Fetch(const std::string& from_code, const std::st
     }
 }
 
+
+std::optional<json> Requester::FetchStationsList() const {
+    std::unordered_map<std::string, std::string> params = {
+        {"apikey", apikey_},
+        {"format", "json"},
+        {"lang", "ru_RU"}
+    };
+
+    auto body = http_client_->Get(kStationsListUrl, params);
+    if (!body) {
+        return std::nullopt;
+    }
+
+    try {
+        json data = json::parse(*body);
+        if (!data.is_object() || !data.contains("countries") || !data["countries"].is_array()) {
+            return std::nullopt;
+        }
+        return data;
+    } catch (...) {
+        return std::nullopt;
+    }
+}
+
 std::string Requester::CacheKey(const std::string& from_code, const std::string& to_code, const std::string& date) const {
     return from_code + "_" + to_code + "_" + date + ".json";
 }
@@ -141,4 +167,13 @@ std::vector<std::string> Requester::FindNearestCities(const std::string& city) c
 
 void Requester::ClearCache() {
     cache_.Clear();
+}
+
+
+std::size_t Requester::UpdateCities() {
+    auto data = FetchStationsList();
+    if (!data) {
+        throw std::runtime_error("Не удалось получить список городов из API");
+    }
+    return cities_.UpdateFromStationsList(*data);
 }

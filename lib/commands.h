@@ -18,6 +18,7 @@ public:
         kExit,
         kCities,
         kClearCache,
+        kUpdateCities,
         kRoute,
         kInvalid
     };
@@ -27,6 +28,7 @@ public:
     static ConsoleCommand Exit();
     static ConsoleCommand Cities();
     static ConsoleCommand ClearCache();
+    static ConsoleCommand UpdateCities();
     static ConsoleCommand Route(RouteQuery query);
     static ConsoleCommand Invalid(std::string error);
 

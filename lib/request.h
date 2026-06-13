@@ -19,7 +19,8 @@ class Requester {
 public:
     explicit Requester(const std::string& apikey);
     Requester(std::string apikey, std::shared_ptr<IHttpClient> http_client,
-              std::filesystem::path cache_dir = std::filesystem::path(PROJECT_DATA_PATH) / "cache");
+              std::filesystem::path cache_dir = std::filesystem::path(PROJECT_DATA_PATH) / "cache",
+              std::filesystem::path cities_file = std::filesystem::path(PROJECT_DATA_PATH) / "cities.json");
 
     std::optional<json> GetRoute(const std::string& from, const std::string& to, const std::string& date) const;
     std::optional<ScheduleResult> GetRoutes(const std::string& from, const std::string& to, const std::string& date) const;
@@ -27,10 +28,12 @@ public:
     std::string GetCanonicalCity(const std::string& city) const;
     std::vector<std::string> FindNearestCities(const std::string& city) const;
     void ClearCache();
+    std::size_t UpdateCities();
 
 private:
     std::string ResolveApiKey(std::string apikey) const;
     std::optional<json> Fetch(const std::string& from_code, const std::string& to_code, const std::string& date) const;
+    std::optional<json> FetchStationsList() const;
     std::string CacheKey(const std::string& from_code, const std::string& to_code, const std::string& date) const;
 
     std::string apikey_;

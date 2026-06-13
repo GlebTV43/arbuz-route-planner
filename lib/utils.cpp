@@ -250,7 +250,7 @@ std::string NormalizeDate(const std::string& date) {
         return "";
     }
 
-    char buffer[11];
+    char buffer[12];
     std::snprintf(buffer, sizeof(buffer), "%04d-%02d-%02d", y, m, d);
     return std::string(buffer);
 }

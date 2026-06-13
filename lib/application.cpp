@@ -51,6 +51,14 @@ bool ConsoleApplication::Execute(const ConsoleCommand& command) {
             requester_.ClearCache();
             output_ << "Кэш очищен.\n";
             return true;
+        case ConsoleCommand::Type::kUpdateCities:
+            try {
+                std::size_t count = requester_.UpdateCities();
+                output_ << "Файл cities.json обновлен. Городов: " << count << "\n";
+            } catch (const std::exception& error) {
+                output_ << "Ошибка обновления городов: " << error.what() << "\n";
+            }
+            return true;
         case ConsoleCommand::Type::kRoute:
             if (command.Query()) {
                 PrintRoute(*command.Query());
@@ -71,6 +79,7 @@ void ConsoleApplication::PrintHelp() const {
     output_ << "  route откуда; куда; дата   произвольный маршрут\n";
     output_ << "  route откуда -> куда дата  произвольный маршрут без пробелов в городах\n";
     output_ << "  cities                     вывести список городов\n";
+    output_ << "  update cities              обновить data/cities.json из API\n";
     output_ << "  clear                      очистить кэш\n";
     output_ << "  help                       показать помощь\n";
     output_ << "  exit                       выйти\n";
