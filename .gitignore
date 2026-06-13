@@ -1,3 +1,7 @@
+/build 
+config.h
+apikey.txt
+
 # Prerequisites
 *.d
 

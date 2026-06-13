@@ -1,0 +1,1063 @@
+{
+  "interval_segments": [],
+  "pagination": {
+    "limit": 50,
+    "offset": 0,
+    "total": 8
+  },
+  "search": {
+    "date": "2026-06-25",
+    "from": {
+      "code": "c2",
+      "popular_title": "Санкт-Петербург",
+      "short_title": "Санкт-Петербург",
+      "title": "Санкт-Петербург",
+      "type": "settlement"
+    },
+    "to": {
+      "code": "c194",
+      "popular_title": "Саратов",
+      "short_title": "Саратов",
+      "title": "Саратов",
+      "type": "settlement"
+    }
+  },
+  "segments": [
+    {
+      "arrival": "2026-06-25T17:45:00+04:00",
+      "arrival_platform": "",
+      "arrival_terminal": "",
+      "departure": "2026-06-25T14:30:00+03:00",
+      "departure_platform": "",
+      "departure_terminal": "1",
+      "duration": 8100.0,
+      "from": {
+        "code": "s9600366",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Пулково",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "has_transfers": false,
+      "start_date": "2026-06-25",
+      "stops": "",
+      "thread": {
+        "carrier": {
+          "address": null,
+          "code": 9144,
+          "codes": {
+            "iata": "DP",
+            "icao": null,
+            "sirena": "ДР"
+          },
+          "contacts": "115114 Москва, ул. Кожевническая, д.7, стр.1.\r\nТелефон колл-центра 8 (809) 505-47-77. Цена от 55 руб. до 60 руб. 17 коп./минута, не включая НДС, в зависимости от региона и оператора (по данным на ноябрь 2014). \r\nДля звонков не из России: +7 (499) 215-23-00 (тарифицируется оператором как междугородный звонок).",
+          "email": null,
+          "logo": "https://yastat.net/s3/rasp/media/data/company/logo/ru_2.png",
+          "logo_svg": "https://yastat.net/s3/rasp/media/data/company/svg/pobeda_ak.svg",
+          "phone": "",
+          "title": "Победа",
+          "url": "https://pobeda.aero/"
+        },
+        "express_type": null,
+        "number": "DP 593",
+        "short_title": "Санкт-Петербург — Саратов",
+        "thread_method_link": "api.rasp.yandex.net/v3/thread/?date=2026-06-25&uid=DP-593_260625_c9144_12",
+        "title": "Санкт-Петербург — Саратов",
+        "transport_subtype": {
+          "code": null,
+          "color": null,
+          "title": null
+        },
+        "transport_type": "plane",
+        "uid": "DP-593_260625_c9144_12",
+        "vehicle": "Boeing 737-800"
+      },
+      "tickets_info": {
+        "et_marker": false,
+        "places": []
+      },
+      "to": {
+        "code": "s9872581",
+        "popular_title": null,
+        "short_title": null,
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Гагарин (Саратов)",
+        "transport_type": "plane",
+        "type": "station"
+      }
+    },
+    {
+      "arrival": "2026-06-26T20:00:00+04:00",
+      "arrival_platform": "",
+      "arrival_terminal": null,
+      "departure": "2026-06-25T18:06:00+03:00",
+      "departure_platform": "",
+      "departure_terminal": null,
+      "duration": 89640.0,
+      "from": {
+        "code": "s9602494",
+        "popular_title": "Московский вокзал",
+        "short_title": "СПб-Моск.",
+        "station_type": "train_station",
+        "station_type_name": "вокзал",
+        "title": "Санкт-Петербург (Московский вокзал)",
+        "transport_type": "train",
+        "type": "station"
+      },
+      "has_transfers": false,
+      "start_date": "2026-06-25",
+      "stops": "",
+      "thread": {
+        "carrier": {
+          "address": "Москва, ул. Новая Басманная , д. 2",
+          "code": 112,
+          "codes": {
+            "iata": null,
+            "icao": null,
+            "sirena": null
+          },
+          "contacts": "Единая телефонная линия: +7 (800) 775-00-00 (звонок бесплатный из всех регионов РФ).",
+          "email": "info@rzd.ru",
+          "logo": "https://yastat.net/s3/rasp/media/data/company/logo/logo.gif",
+          "logo_svg": null,
+          "phone": "+7 (800) 775-00-00",
+          "title": "РЖД/ФПК",
+          "url": "http://www.rzd.ru/"
+        },
+        "express_type": null,
+        "number": "109А",
+        "short_title": "Санкт-Петербург — Астрахань",
+        "thread_method_link": "api.rasp.yandex.net/v3/thread/?date=2026-06-25&uid=109A_8_2",
+        "title": "Санкт-Петербург — Астрахань",
+        "transport_subtype": {
+          "code": null,
+          "color": null,
+          "title": null
+        },
+        "transport_type": "train",
+        "uid": "109A_8_2",
+        "vehicle": null
+      },
+      "tickets_info": {
+        "et_marker": false,
+        "places": []
+      },
+      "to": {
+        "code": "s9623135",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "station",
+        "station_type_name": "станция",
+        "title": "Саратов-1-Пасс.",
+        "transport_type": "train",
+        "type": "station"
+      }
+    },
+    {
+      "arrival": "2026-06-25T21:40:00+04:00",
+      "arrival_platform": "",
+      "arrival_terminal": "",
+      "departure": "2026-06-25T18:25:00+03:00",
+      "departure_platform": "",
+      "departure_terminal": "1",
+      "duration": 8100.0,
+      "from": {
+        "code": "s9600366",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Пулково",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "has_transfers": false,
+      "start_date": "2026-06-25",
+      "stops": "",
+      "thread": {
+        "carrier": {
+          "address": null,
+          "code": 9144,
+          "codes": {
+            "iata": "DP",
+            "icao": null,
+            "sirena": "ДР"
+          },
+          "contacts": "115114 Москва, ул. Кожевническая, д.7, стр.1.\r\nТелефон колл-центра 8 (809) 505-47-77. Цена от 55 руб. до 60 руб. 17 коп./минута, не включая НДС, в зависимости от региона и оператора (по данным на ноябрь 2014). \r\nДля звонков не из России: +7 (499) 215-23-00 (тарифицируется оператором как междугородный звонок).",
+          "email": null,
+          "logo": "https://yastat.net/s3/rasp/media/data/company/logo/ru_2.png",
+          "logo_svg": "https://yastat.net/s3/rasp/media/data/company/svg/pobeda_ak.svg",
+          "phone": "",
+          "title": "Победа",
+          "url": "https://pobeda.aero/"
+        },
+        "express_type": null,
+        "number": "DP 577",
+        "short_title": "Санкт-Петербург — Саратов",
+        "thread_method_link": "api.rasp.yandex.net/v3/thread/?date=2026-06-25&uid=DP-577_260625_c9144_12",
+        "title": "Санкт-Петербург — Саратов",
+        "transport_subtype": {
+          "code": null,
+          "color": null,
+          "title": null
+        },
+        "transport_type": "plane",
+        "uid": "DP-577_260625_c9144_12",
+        "vehicle": "Boeing 737-800"
+      },
+      "tickets_info": {
+        "et_marker": false,
+        "places": []
+      },
+      "to": {
+        "code": "s9872581",
+        "popular_title": null,
+        "short_title": null,
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Гагарин (Саратов)",
+        "transport_type": "plane",
+        "type": "station"
+      }
+    },
+    {
+      "arrival": "2026-06-25T15:05:00+04:00",
+      "arrival_to": {
+        "code": "s9872581",
+        "popular_title": null,
+        "short_title": null,
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Гагарин (Саратов)",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "departure": "2026-06-25T08:00:00+03:00",
+      "departure_from": {
+        "code": "s9600366",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Пулково",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "details": [
+        {
+          "arrival": "2026-06-25T09:30:00+03:00",
+          "arrival_platform": "",
+          "arrival_terminal": "B",
+          "departure": "2026-06-25T08:00:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "1",
+          "duration": 5400.0,
+          "from": {
+            "code": "c2",
+            "popular_title": "Санкт-Петербург",
+            "short_title": "Санкт-Петербург",
+            "title": "Санкт-Петербург",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-25",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6952",
+            "short_title": "Санкт-Петербург — Москва",
+            "title": "Санкт-Петербург — Москва",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6952_260625_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          }
+        },
+        {
+          "duration": 10500.0,
+          "is_transfer": true,
+          "transfer_from": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          },
+          "transfer_point": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "transfer_to": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          }
+        },
+        {
+          "arrival": "2026-06-25T15:05:00+04:00",
+          "arrival_platform": "",
+          "arrival_terminal": "",
+          "departure": "2026-06-25T12:25:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "D",
+          "duration": 6000.0,
+          "from": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-25",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 9144,
+              "codes": {
+                "iata": "DP",
+                "icao": null,
+                "sirena": "ДР"
+              },
+              "title": "Победа"
+            },
+            "express_type": null,
+            "number": "DP 6861",
+            "short_title": "Москва — Саратов",
+            "title": "Москва — Саратов",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "DP-6861_260625_c9144_12",
+            "vehicle": "Boeing 737-800"
+          },
+          "to": {
+            "code": "c194",
+            "popular_title": "Саратов",
+            "short_title": "Саратов",
+            "title": "Саратов",
+            "type": "settlement"
+          }
+        }
+      ],
+      "has_transfers": true,
+      "transfers": [
+        {
+          "code": "c213",
+          "popular_title": "Москва",
+          "short_title": "Москва",
+          "title": "Москва",
+          "type": "settlement"
+        }
+      ],
+      "transport_types": [
+        "plane",
+        "plane"
+      ]
+    },
+    {
+      "arrival": "2026-06-26T09:40:00+04:00",
+      "arrival_to": {
+        "code": "s9872581",
+        "popular_title": null,
+        "short_title": null,
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Гагарин (Саратов)",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "departure": "2026-06-25T23:55:00+03:00",
+      "departure_from": {
+        "code": "s9600366",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Пулково",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "details": [
+        {
+          "arrival": "2026-06-26T01:25:00+03:00",
+          "arrival_platform": "",
+          "arrival_terminal": "B",
+          "departure": "2026-06-25T23:55:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "1",
+          "duration": 5400.0,
+          "from": {
+            "code": "c2",
+            "popular_title": "Санкт-Петербург",
+            "short_title": "Санкт-Петербург",
+            "title": "Санкт-Петербург",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-25",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6708",
+            "short_title": "Санкт-Петербург — Москва",
+            "title": "Санкт-Петербург — Москва",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6708_260625_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          }
+        },
+        {
+          "duration": 19800.0,
+          "is_transfer": true,
+          "transfer_from": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          },
+          "transfer_point": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "transfer_to": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          }
+        },
+        {
+          "arrival": "2026-06-26T09:40:00+04:00",
+          "arrival_platform": "",
+          "arrival_terminal": "",
+          "departure": "2026-06-26T06:55:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "B",
+          "duration": 6300.0,
+          "from": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-26",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6491",
+            "short_title": "Москва — Саратов",
+            "title": "Москва — Саратов",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6491_260626_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c194",
+            "popular_title": "Саратов",
+            "short_title": "Саратов",
+            "title": "Саратов",
+            "type": "settlement"
+          }
+        }
+      ],
+      "has_transfers": true,
+      "transfers": [
+        {
+          "code": "c213",
+          "popular_title": "Москва",
+          "short_title": "Москва",
+          "title": "Москва",
+          "type": "settlement"
+        }
+      ],
+      "transport_types": [
+        "plane",
+        "plane"
+      ]
+    },
+    {
+      "arrival": "2026-06-26T09:40:00+04:00",
+      "arrival_to": {
+        "code": "s9872581",
+        "popular_title": null,
+        "short_title": null,
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Гагарин (Саратов)",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "departure": "2026-06-25T23:30:00+03:00",
+      "departure_from": {
+        "code": "s9600366",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Пулково",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "details": [
+        {
+          "arrival": "2026-06-26T01:00:00+03:00",
+          "arrival_platform": "",
+          "arrival_terminal": "B",
+          "departure": "2026-06-25T23:30:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "1",
+          "duration": 5400.0,
+          "from": {
+            "code": "c2",
+            "popular_title": "Санкт-Петербург",
+            "short_title": "Санкт-Петербург",
+            "title": "Санкт-Петербург",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-25",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6706",
+            "short_title": "Санкт-Петербург — Москва",
+            "title": "Санкт-Петербург — Москва",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6706_260625_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          }
+        },
+        {
+          "duration": 21300.0,
+          "is_transfer": true,
+          "transfer_from": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          },
+          "transfer_point": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "transfer_to": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          }
+        },
+        {
+          "arrival": "2026-06-26T09:40:00+04:00",
+          "arrival_platform": "",
+          "arrival_terminal": "",
+          "departure": "2026-06-26T06:55:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "B",
+          "duration": 6300.0,
+          "from": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-26",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6491",
+            "short_title": "Москва — Саратов",
+            "title": "Москва — Саратов",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6491_260626_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c194",
+            "popular_title": "Саратов",
+            "short_title": "Саратов",
+            "title": "Саратов",
+            "type": "settlement"
+          }
+        }
+      ],
+      "has_transfers": true,
+      "transfers": [
+        {
+          "code": "c213",
+          "popular_title": "Москва",
+          "short_title": "Москва",
+          "title": "Москва",
+          "type": "settlement"
+        }
+      ],
+      "transport_types": [
+        "plane",
+        "plane"
+      ]
+    },
+    {
+      "arrival": "2026-06-26T09:40:00+04:00",
+      "arrival_to": {
+        "code": "s9872581",
+        "popular_title": null,
+        "short_title": null,
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Гагарин (Саратов)",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "departure": "2026-06-25T23:00:00+03:00",
+      "departure_from": {
+        "code": "s9600366",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Пулково",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "details": [
+        {
+          "arrival": "2026-06-26T00:30:00+03:00",
+          "arrival_platform": "",
+          "arrival_terminal": "B",
+          "departure": "2026-06-25T23:00:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "1",
+          "duration": 5400.0,
+          "from": {
+            "code": "c2",
+            "popular_title": "Санкт-Петербург",
+            "short_title": "Санкт-Петербург",
+            "title": "Санкт-Петербург",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-25",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6098",
+            "short_title": "Санкт-Петербург — Москва",
+            "title": "Санкт-Петербург — Москва",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6098_260625_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          }
+        },
+        {
+          "duration": 23100.0,
+          "is_transfer": true,
+          "transfer_from": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          },
+          "transfer_point": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "transfer_to": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          }
+        },
+        {
+          "arrival": "2026-06-26T09:40:00+04:00",
+          "arrival_platform": "",
+          "arrival_terminal": "",
+          "departure": "2026-06-26T06:55:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "B",
+          "duration": 6300.0,
+          "from": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-26",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6491",
+            "short_title": "Москва — Саратов",
+            "title": "Москва — Саратов",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6491_260626_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c194",
+            "popular_title": "Саратов",
+            "short_title": "Саратов",
+            "title": "Саратов",
+            "type": "settlement"
+          }
+        }
+      ],
+      "has_transfers": true,
+      "transfers": [
+        {
+          "code": "c213",
+          "popular_title": "Москва",
+          "short_title": "Москва",
+          "title": "Москва",
+          "type": "settlement"
+        }
+      ],
+      "transport_types": [
+        "plane",
+        "plane"
+      ]
+    },
+    {
+      "arrival": "2026-06-26T09:40:00+04:00",
+      "arrival_to": {
+        "code": "s9872581",
+        "popular_title": null,
+        "short_title": null,
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Гагарин (Саратов)",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "departure": "2026-06-25T22:25:00+03:00",
+      "departure_from": {
+        "code": "s9600366",
+        "popular_title": "",
+        "short_title": "",
+        "station_type": "airport",
+        "station_type_name": "аэропорт",
+        "title": "Пулково",
+        "transport_type": "plane",
+        "type": "station"
+      },
+      "details": [
+        {
+          "arrival": "2026-06-25T23:25:00+03:00",
+          "arrival_platform": "",
+          "arrival_terminal": "D",
+          "departure": "2026-06-25T22:25:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "1",
+          "duration": 3600.0,
+          "from": {
+            "code": "c2",
+            "popular_title": "Санкт-Петербург",
+            "short_title": "Санкт-Петербург",
+            "title": "Санкт-Петербург",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-25",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 9144,
+              "codes": {
+                "iata": "DP",
+                "icao": null,
+                "sirena": "ДР"
+              },
+              "title": "Победа"
+            },
+            "express_type": null,
+            "number": "DP 6826",
+            "short_title": "Санкт-Петербург — Москва",
+            "title": "Санкт-Петербург — Москва",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "DP-6826_260625_c9144_12",
+            "vehicle": "Boeing 737-800"
+          },
+          "to": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          }
+        },
+        {
+          "duration": 27000.0,
+          "is_transfer": true,
+          "transfer_from": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          },
+          "transfer_point": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "transfer_to": {
+            "code": "s9600213",
+            "popular_title": null,
+            "short_title": null,
+            "station_type": "airport",
+            "station_type_name": "аэропорт",
+            "title": "Шереметьево",
+            "transport_type": "plane",
+            "type": "station"
+          }
+        },
+        {
+          "arrival": "2026-06-26T09:40:00+04:00",
+          "arrival_platform": "",
+          "arrival_terminal": "",
+          "departure": "2026-06-26T06:55:00+03:00",
+          "departure_platform": "",
+          "departure_terminal": "B",
+          "duration": 6300.0,
+          "from": {
+            "code": "c213",
+            "popular_title": "Москва",
+            "short_title": "Москва",
+            "title": "Москва",
+            "type": "settlement"
+          },
+          "start_date": "2026-06-26",
+          "stops": "",
+          "thread": {
+            "carrier": {
+              "code": 8565,
+              "codes": {
+                "iata": "FV",
+                "icao": null,
+                "sirena": "ФВ"
+              },
+              "title": "Россия"
+            },
+            "express_type": null,
+            "number": "FV 6491",
+            "short_title": "Москва — Саратов",
+            "title": "Москва — Саратов",
+            "transport_subtype": {
+              "code": null,
+              "color": null,
+              "title": null
+            },
+            "transport_type": "plane",
+            "uid": "FV-6491_260626_c8565_12",
+            "vehicle": "Сухой Суперджет 100"
+          },
+          "to": {
+            "code": "c194",
+            "popular_title": "Саратов",
+            "short_title": "Саратов",
+            "title": "Саратов",
+            "type": "settlement"
+          }
+        }
+      ],
+      "has_transfers": true,
+      "transfers": [
+        {
+          "code": "c213",
+          "popular_title": "Москва",
+          "short_title": "Москва",
+          "title": "Москва",
+          "type": "settlement"
+        }
+      ],
+      "transport_types": [
+        "plane",
+        "plane"
+      ]
+    }
+  ]
+}
